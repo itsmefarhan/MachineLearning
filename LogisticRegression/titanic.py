@@ -37,7 +37,7 @@ model.fit(X, y)
 test_data = pd.read_csv('../Datasets/titanic_test.csv')
 # print(test_data.head())
 print(test_data.isnull().sum())
-test_data['Fare']=test_data['Fare'].fillna(data['Fare'].median())
+test_data['Fare']=test_data['Fare'].fillna(test_data['Fare'].median())
 X_test = test_data.iloc[:, [1, 3, 5,6,7,8]].values
 # print(X_test)
 
